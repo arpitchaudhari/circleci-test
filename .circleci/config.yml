@@ -10,7 +10,7 @@ jobs:
       - checkout
       - newman/newman-run:
           collection: ./test/postman/resource-api.postman_collection.json
-          enviroment: ./test/postman/resource-api.postman_environment.json
+          environment: ./test/postman/resource-api.postman_environment.json
 
 workflows:
   version: 2.1
