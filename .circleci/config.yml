@@ -9,6 +9,7 @@ orbs:
         - newman/newman-run:
             enviroment: ./test/postman/resource-api.postman_environment.json
             collection: ./test/postman/resource-api.postman_collection.json
+jobs:
 
 workflows:
   version: 1
