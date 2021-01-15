@@ -16,7 +16,6 @@ workflows:
   build:
     jobs:
       - "newman-collection-run":
-          context: org-global
           filters:
             branches:
               only:
