@@ -1,21 +1,20 @@
 version: 2
 orbs:
   newman: postman/newman@0.0.2
-
-jobs:
-  "newman-collection-run":
-    executor: newman/postman-newman-docker
-    steps:
-      - checkout
-      - newman/newman-run:
-          enviroment: ./test/postman/resource-api.postman_environment.json
-          collection: ./test/postman/resource-api.postman_collection.json
+  jobs:
+    "newman-collection-run":
+      executor: newman/postman-newman-docker
+      steps:
+        - checkout
+        - newman/newman-run:
+            enviroment: ./test/postman/resource-api.postman_environment.json
+            collection: ./test/postman/resource-api.postman_collection.json
 
 workflows:
   version: 1
   build:
     jobs:
-      - "newman-collection-run":
+      - "orbs/newman-collection-run":
           context: org-global
           filters:
             branches:
