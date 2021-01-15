@@ -9,8 +9,8 @@ jobs:
     steps:
       - checkout
       - newman/newman-run:
-          enviroment: ./test/postman/resource-api.postman_environment.json
           collection: ./test/postman/resource-api.postman_collection.json
+           enviroment: ./test/postman/resource-api.postman_environment.json
 
 workflows:
   version: 2.1
